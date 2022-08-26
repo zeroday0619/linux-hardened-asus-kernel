@@ -121,7 +121,7 @@ Summary: The Linux kernel
 #  to build the base kernel using the debug configuration. (Specifying
 #  the --with-release option overrides this setting.)
 %define debugbuildsenabled 0
-# define buildid .local
+%define buildid .local
 %define specversion 6.0.0
 %define patchversion 6.0
 %define pkgrelease 0.rc2.20220824gitc40e8341e3b3.23
@@ -859,6 +859,23 @@ Source4002: gating.yaml
 %if !%{nopatches}
 
 Patch1: patch-%{patchversion}-redhat.patch
+Patch500: 0001-Fixes-98829e84dc67-asus-wmi-Add-dgpu-disable-method.patch
+Patch501: 0002-Fixes-382b91db8044-asus-wmi-Add-egpu-enable-method.patch
+Patch502: 0003-Fixes-ca91ea34778f-asus-wmi-Add-panel-overdrive-func.patch
+Patch503: 0004-asus-wmi-Refactor-disable_gpu-attribute.patch
+Patch504: 0005-asus-wmi-Refactor-egpu_enable-attribute.patch
+Patch505: 0006-asus-wmi-Refactor-panel_od-attribute.patch
+Patch506: 0007-asus-wmi-Support-the-hardware-GPU-MUX-on-some-laptop.patch
+Patch507: 0008-asus-wmi-Adjust-tablet-lidflip-handling-to-use-enum.patch
+Patch508: 0009-asus-wmi-Add-support-for-ROG-X13-tablet-mode.patch
+Patch509: 0010-asus-wmi-Modify-behaviour-of-Fn-F5-fan-key.patch
+Patch600: 0011-asus-wmi-Support-the-GPU-fan-on-TUF-laptops.patch
+Patch601: 0012-sound-realtek-Add-pincfg-for-ASUS-G533Z.patch
+Patch602: 0013-sound-realtek-Add-pincfg-for-ASUS-G513.patch
+Patch603: 0014-HID-amd_sfh-Add-keyguard-for-ASUS-ROG-X13-tablet.patch
+Patch604: 0015-asus-wmi-Convert-all-attr-show-to-use-sysfs_emit.patch
+Patch605: 0016-asus-wmi-Implement-TUF-laptop-keyboard-LED-modes.patch
+Patch606: 0017-asus-wmi-Implement-TUF-laptop-keyboard-power-states.patch
 %endif
 
 # empty final patch to facilitate testing of kernel patches
