@@ -124,13 +124,13 @@ Summary: The Linux kernel
 %define buildid .local
 %define specversion 6.0.0
 %define patchversion 6.0
-%define pkgrelease 0.rc2.20220824gitc40e8341e3b3.23
+%define pkgrelease 0.rc3.20220902git42e66b1cc3a0.28
 %define kversion 6
-%define tarfile_release 6.0-rc2-54-gc40e8341e3b3
+%define tarfile_release 6.0-rc3-107-g42e66b1cc3a0
 # This is needed to do merge window version magic
 %define patchlevel 0
 # This allows pkg_release to have configurable %%{?dist} tag
-%define specrelease 0.rc2.20220824gitc40e8341e3b3.23%{?buildid}%{?dist}
+%define specrelease 0.rc3.20220902git42e66b1cc3a0.28%{?buildid}%{?dist}
 # This defines the kabi tarball version
 %define kabiversion 6.0.0
 
@@ -571,7 +571,7 @@ Requires: kernel-modules-uname-r = %{KVERREL}
 #
 # List the packages used during the kernel build
 #
-BuildRequires: kmod, bash, coreutils, tar, git-core, which, acl
+BuildRequires: kmod, bash, coreutils, tar, git-core, which
 BuildRequires: bzip2, xz, findutils, gzip, m4, perl-interpreter, perl-Carp, perl-devel, perl-generators, make, diffutils, gawk
 BuildRequires: gcc, binutils, redhat-rpm-config, hmaccalc, bison, flex, gcc-c++
 BuildRequires: net-tools, hostname, bc, elfutils-devel
@@ -3164,11 +3164,37 @@ fi
 #
 #
 %changelog
-* Wed Aug 24 2022 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.0.0-0.rc2.c40e8341e3b3.23]
-- bump for build again
+* Fri Sep 02 2022 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.0.0-0.rc3.42e66b1cc3a0.28]
+- Fedora 6.0 configs part 1 (Justin M. Forbes)
+- Linux v6.0.0-0.rc3.42e66b1cc3a0
 
-* Wed Aug 24 2022 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.0.0-0.rc2.c40e8341e3b3.22]
-- bump for build
+* Thu Sep 01 2022 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.0.0-0.rc3.c5e4d5e99162.27]
+- redhat/Makefile: Always set UPSTREAM (Prarit Bhargava)
+- redhat/configs: aarch64: Turn on Apple Silicon configs for Fedora (Eric Curtin)
+- Linux v6.0.0-0.rc3.c5e4d5e99162
+
+* Tue Aug 30 2022 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.0.0-0.rc3.dcf8e5633e2e.26]
+- Add cpumask_kunit to mod-internal.list (Justin M. Forbes)
+- config - consolidate disabled MARCH options on s390x (Dan Horák)
+- move the baseline arch to z13 for s390x in F-37+ (Dan Horák)
+- redhat/scripts/rh-dist-git.sh: Fix outdated cvs reference (Prarit Bhargava)
+- redhat/scripts/expand_srpm.sh: Use Makefile variables (Prarit Bhargava)
+- redhat/scripts/clone_tree.sh: Use Makefile variables (Prarit Bhargava)
+- Linux v6.0.0-0.rc3.dcf8e5633e2e
+
+* Mon Aug 29 2022 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.0.0-0.rc3.25]
+- Linux v6.0.0-0.rc3
+
+* Sun Aug 28 2022 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.0.0-0.rc2.10d4879f9ef0.24]
+- Linux v6.0.0-0.rc2.10d4879f9ef0
+
+* Sat Aug 27 2022 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.0.0-0.rc2.e022620b5d05.23]
+- Fedora: arm changes for 6.0, part 1, with some ACPI (Peter Robinson)
+- redhat/self-test: Fix shellcheck errors (Prarit Bhargava)
+- Linux v6.0.0-0.rc2.e022620b5d05
+
+* Fri Aug 26 2022 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.0.0-0.rc2.4c612826bec1.22]
+- Linux v6.0.0-0.rc2.4c612826bec1
 
 * Wed Aug 24 2022 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.0.0-0.rc2.c40e8341e3b3.21]
 - Linux v6.0.0-0.rc2.c40e8341e3b3
