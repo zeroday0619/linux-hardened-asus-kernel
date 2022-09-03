@@ -1,2 +1,8 @@
 *.xz
 *.bz2
+*.log
+*.rpm
+.vscode/*
+kernel-6.0-rc3-107-g42e66b1cc3a0/*
+x86_64/
+x86_64/*
