@@ -278,10 +278,6 @@ function process_config()
 	make ${MAKEOPTS} ARCH="$arch" CROSS_COMPILE="$(get_cross_compile "$arch")" KCONFIG_CONFIG="$cfgorig" olddefconfig > /dev/null || exit 1
 	echo "# $arch" > "$cfgtmp"
 	cat "$cfgorig" >> "$cfgtmp"
-	if test -n "$CHECKOPTIONS"
-	then
-		checkoptions "$cfg" "$cfgtmp" "$count" "$variant"
-	fi
 	# if test run, don't overwrite original
 	if test -n "$TESTRUN"
 	then
