@@ -124,13 +124,13 @@ Summary: The Linux kernel
 %define buildid .local
 %define specversion 6.0.0
 %define patchversion 6.0
-%define pkgrelease 0.rc3.20220902git42e66b1cc3a0.28
+%define pkgrelease 0.rc4.20220906git53e99dcff61e.32
 %define kversion 6
-%define tarfile_release 6.0-rc3-107-g42e66b1cc3a0
+%define tarfile_release 6.0-rc4-55-g53e99dcff61e
 # This is needed to do merge window version magic
 %define patchlevel 0
 # This allows pkg_release to have configurable %%{?dist} tag
-%define specrelease 0.rc3.20220902git42e66b1cc3a0.28%{?buildid}%{?dist}
+%define specrelease 0.rc4.20220906git53e99dcff61e.32%{?buildid}%{?dist}
 # This defines the kabi tarball version
 %define kabiversion 6.0.0
 
@@ -3164,6 +3164,20 @@ fi
 #
 #
 %changelog
+* Tue Sep 06 2022 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.0.0-0.rc4.53e99dcff61e.32]
+- Linux v6.0.0-0.rc4.53e99dcff61e
+
+* Mon Sep 05 2022 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.0.0-0.rc4.31]
+- Linux v6.0.0-0.rc4
+
+* Sun Sep 04 2022 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.0.0-0.rc3.7726d4c3e60b.30]
+- Linux v6.0.0-0.rc3.7726d4c3e60b
+
+* Sat Sep 03 2022 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.0.0-0.rc3.d895ec7938c4.29]
+- Add cpumask_kunit to mod-internal.list (Patrick Talbert)
+- redhat/configs: enable UINPUT on aarch64 (Benjamin Tissoires)
+- Linux v6.0.0-0.rc3.d895ec7938c4
+
 * Fri Sep 02 2022 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.0.0-0.rc3.42e66b1cc3a0.28]
 - Fedora 6.0 configs part 1 (Justin M. Forbes)
 - Linux v6.0.0-0.rc3.42e66b1cc3a0
